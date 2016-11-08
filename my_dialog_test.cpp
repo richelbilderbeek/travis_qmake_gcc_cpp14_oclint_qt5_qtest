@@ -26,7 +26,8 @@ void my_dialog_test::close_with_escape()
   my_dialog d;
   d.show();
   QVERIFY(d.isVisible());
-  QTest::keyPress(&d,Qt::Key_Escape,Qt::NoModifier, 100);
+
+  QTest::keyClick(&d,Qt::Key_Escape,Qt::NoModifier, 100);
   QVERIFY(d.isHidden());
 }
 
