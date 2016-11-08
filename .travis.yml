@@ -32,4 +32,4 @@ script:
   - qmake -qt=qt5 travis_qmake_gcc_cpp14_oclint_qt5_qtest.pro
   - make
   # Run test
-  - ./travis_qmake_gcc_cpp14_qt5_oclint_qtest_test
+  - ./travis_qmake_gcc_cpp14_oclint_qt5_qtest_test
