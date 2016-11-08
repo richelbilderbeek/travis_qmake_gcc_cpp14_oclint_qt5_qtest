@@ -9,7 +9,7 @@ h_files=`ls *.h | egrep -v "^ui_.*\.h$"`
   $h_files \
   -- \
   -c -std=c++14 -fPIE \
-  -DQT_WIDGETS_LIB -DQT_TESTLIB_LIB \
+  -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB \
   -I/usr/include/c++/5 \
   -I/usr/include/x86_64-linux-gnu/c++/5 \
   -I/usr/include/qt5 \
