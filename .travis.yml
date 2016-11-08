@@ -17,6 +17,8 @@ install:
   - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   # C++14
   - sudo apt-get install -qq g++-5
+  # OCLint
+  - ./install_oclint.sh
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
 before_script:
@@ -33,3 +35,5 @@ script:
   - make
   # Run test
   - ./travis_qmake_gcc_cpp14_oclint_qt5_qtest_test
+  # OCLint
+  - ./do_oclint.sh
