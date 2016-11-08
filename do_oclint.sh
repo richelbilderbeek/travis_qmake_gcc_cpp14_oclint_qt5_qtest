@@ -14,6 +14,7 @@ h_files=`ls *.h`
   -I/usr/include/qt5 \
   -I/usr/include/qt5/QtCore \
   -I/usr/include/qt5/QtGui \
+  -I/usr/include/qt5/QtTest \
   -I/usr/include/qt5/QtWidgets 
 
 cat oclint.log

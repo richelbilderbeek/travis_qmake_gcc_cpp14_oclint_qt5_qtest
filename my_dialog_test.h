@@ -5,7 +5,8 @@
 
 class my_dialog_test: public QObject
 {
-    Q_OBJECT
+    Q_OBJECT //!OCLINT
+
 private slots:
     //Works locally, but not on travis
     //void close_with_alt_c();
