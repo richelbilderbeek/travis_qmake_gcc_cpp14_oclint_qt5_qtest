@@ -15,8 +15,6 @@ install:
   # Qt5
   - sudo apt-get install -qq libqt5webkit5-dev qtdeclarative5-dev
   - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
-  # Qt5 test
-  - sudo apt-get install -qq libqt5test5
   # C++14
   - sudo apt-get install -qq g++-5
   # OCLint
