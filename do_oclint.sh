@@ -1,11 +1,20 @@
 #!/bin/bash
 
-cpp_files=`ls *.cpp`
+cpp_files=`ls *.cpp | egrep -v "^moc_.*\.cpp$" | egrep -v "^qrc_.*\.cpp$"`
+h_files=`ls *.h`
 
-# Clean main should work
 ./oclint-0.10.3/bin/oclint -o oclint.log \
+  -disable-rule ShortVariableName \
   $cpp_files \
-  -- -c -std=c++11
+  $h_files \
+  -- \
+  -c -std=c++14 -fPIE \
+  -I/usr/include/c++/5 \
+  -I/usr/include/x86_64-linux-gnu/c++/5 \
+  -I/usr/include/qt5 \
+  -I/usr/include/qt5/QtCore \
+  -I/usr/include/qt5/QtGui \
+  -I/usr/include/qt5/QtWidgets 
 
 cat oclint.log
 
